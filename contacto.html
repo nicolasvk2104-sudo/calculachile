@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto — CalculaChile</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --verde: #0d9e6e; --verde-dark: #0a7d57; --verde-light: #e6f7f2;
+    --gris: #f5f6f8; --gris-medio: #e2e4e9; --gris-texto: #6b7280;
+    --texto: #111827; --blanco: #ffffff;
+    --fuente: 'DM Sans', sans-serif; --titulo: 'Sora', sans-serif;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: var(--fuente); color: var(--texto); background: #fafbfc; font-size: 16px; line-height:1.7; }
+  nav { background: var(--blanco); border-bottom: 1px solid var(--gris-medio); padding: 0 24px; }
+  .nav-inner { max-width: 860px; margin: 0 auto; display:flex; align-items:center; height: 64px; }
+  .logo { font-family: var(--titulo); font-size: 20px; font-weight: 700; color: var(--verde-dark); text-decoration:none; display:flex; align-items:center; gap:8px; }
+  .logo-icon { width:30px; height:30px; background: var(--verde); border-radius:7px; display:flex; align-items:center; justify-content:center; font-size:16px; }
+  .container { max-width: 860px; margin: 0 auto; padding: 48px 24px 80px; }
+  .page-header { background: var(--verde-light); border-radius: 12px; padding: 32px; margin-bottom: 40px; border-left: 4px solid var(--verde); }
+  .page-header h1 { font-family: var(--titulo); font-size: 28px; font-weight: 700; color: var(--verde-dark); margin-bottom: 8px; }
+  .page-header p { color: var(--gris-texto); font-size: 15px; }
+  .contact-grid { display:grid; grid-template-columns: 1fr 1fr; gap:32px; }
+  @media(max-width:640px){ .contact-grid { grid-template-columns:1fr; } }
+  .form-card { background:white; border:1px solid var(--gris-medio); border-radius:14px; padding:32px; }
+  .form-card h2 { font-family:var(--titulo); font-size:20px; font-weight:700; margin-bottom:20px; }
+  .form-group { margin-bottom:18px; }
+  .form-label { display:block; font-size:13px; font-weight:500; margin-bottom:6px; }
+  .form-input { width:100%; padding:11px 14px; border:1.5px solid var(--gris-medio); border-radius:8px; font-size:15px; font-family:var(--fuente); color:var(--texto); outline:none; transition:.15s; background:white; }
+  .form-input:focus { border-color:var(--verde); box-shadow:0 0 0 3px rgba(13,158,110,0.1); }
+  textarea.form-input { min-height:130px; resize:vertical; }
+  .btn-submit { width:100%; padding:14px; background:var(--verde); color:white; border:none; border-radius:8px; font-size:16px; font-weight:600; cursor:pointer; font-family:var(--fuente); transition:.15s; }
+  .btn-submit:hover { background:var(--verde-dark); }
+  .success-msg { display:none; background:#e6f7f2; border:1px solid var(--verde); border-radius:8px; padding:16px; margin-top:16px; color:var(--verde-dark); font-weight:500; text-align:center; }
+  .info-card { display:flex; flex-direction:column; gap:16px; }
+  .info-item { background:white; border:1px solid var(--gris-medio); border-radius:12px; padding:20px; }
+  .info-item h3 { font-family:var(--titulo); font-size:15px; font-weight:600; margin-bottom:6px; }
+  .info-item p { font-size:14px; color:var(--gris-texto); margin:0; }
+  .info-icon { font-size:24px; margin-bottom:8px; }
+  .faq { margin-top:48px; }
+  .faq h2 { font-family:var(--titulo); font-size:22px; font-weight:700; margin-bottom:20px; }
+  .faq-item { border:1px solid var(--gris-medio); border-radius:10px; margin-bottom:10px; overflow:hidden; }
+  .faq-q { padding:16px 20px; font-weight:500; cursor:pointer; display:flex; justify-content:space-between; align-items:center; background:white; }
+  .faq-q:hover { background:var(--gris); }
+  .faq-a { padding:0 20px; max-height:0; overflow:hidden; transition:.3s; font-size:14px; color:var(--gris-texto); background:var(--gris); }
+  .faq-a.open { padding:16px 20px; max-height:200px; }
+  footer { background: #111827; color: rgba(255,255,255,0.5); text-align:center; padding: 24px; font-size: 13px; }
+  footer a { color: rgba(255,255,255,0.6); text-decoration:none; margin: 0 12px; }
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><div class="logo-icon">🧮</div>CalculaChile</a>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="page-header">
+    <h1>Contacto</h1>
+    <p>¿Tienes una consulta, encontraste un error o quieres sugerir una calculadora? Escríbenos.</p>
+  </div>
+
+  <div class="contact-grid">
+    <div class="form-card">
+      <h2>Envíanos un mensaje</h2>
+      <div class="form-group">
+        <label class="form-label">Tu nombre</label>
+        <input class="form-input" type="text" id="nombre" placeholder="Ej: María González">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Tu email</label>
+        <input class="form-input" type="email" id="email" placeholder="tu@email.com">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Asunto</label>
+        <select class="form-input" id="asunto">
+          <option value="">Selecciona un asunto</option>
+          <option value="error">Encontré un error en una calculadora</option>
+          <option value="sugerencia">Sugerencia de nueva calculadora</option>
+          <option value="consulta">Consulta general</option>
+          <option value="publicidad">Publicidad y colaboraciones</option>
+          <option value="otro">Otro</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Mensaje</label>
+        <textarea class="form-input" id="mensaje" placeholder="Escribe tu mensaje aquí..."></textarea>
+      </div>
+      <button class="btn-submit" onclick="enviarFormulario()">Enviar mensaje</button>
+      <div class="success-msg" id="successMsg">
+        ✅ ¡Mensaje enviado! Te responderemos en 24-48 horas hábiles.
+      </div>
+    </div>
+
+    <div class="info-card">
+      <div class="info-item">
+        <div class="info-icon">⏱️</div>
+        <h3>Tiempo de respuesta</h3>
+        <p>Respondemos todos los mensajes en un plazo de 24 a 48 horas hábiles.</p>
+      </div>
+      <div class="info-item">
+        <div class="info-icon">🐛</div>
+        <h3>Reportar un error</h3>
+        <p>Si encontraste un error en alguna calculadora, indícanos cuál es, qué valores ingresaste y qué resultado obtuviste. Lo revisamos de inmediato.</p>
+      </div>
+      <div class="info-item">
+        <div class="info-icon">💡</div>
+        <h3>Sugerir calculadoras</h3>
+        <p>¿Necesitas una calculadora que no tenemos? Cuéntanos y la evaluamos para agregarla.</p>
+      </div>
+      <div class="info-item">
+        <div class="info-icon">📢</div>
+        <h3>Publicidad</h3>
+        <p>Para consultas sobre publicidad o colaboraciones comerciales, selecciona "Publicidad y colaboraciones" en el formulario.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="faq">
+    <h2>Preguntas frecuentes</h2>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">¿Las calculadoras son 100% gratuitas? <span>+</span></div>
+      <div class="faq-a">Sí, todas las calculadoras de CalculaChile son completamente gratuitas y no requieren registro ni suscripción.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">¿Guardan mis datos cuando uso las calculadoras? <span>+</span></div>
+      <div class="faq-a">No. Los datos que ingresas en las calculadoras (sueldos, montos, etc.) se procesan localmente en tu navegador y no se envían ni almacenan en ningún servidor.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">¿Con qué frecuencia actualizan los valores? <span>+</span></div>
+      <div class="faq-a">Actualizamos valores como UF, UTM, sueldo mínimo y tasas de AFP cada vez que cambian oficialmente según el Banco Central, SII y organismos competentes.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">¿Los resultados son oficiales? <span>+</span></div>
+      <div class="faq-a">Son estimaciones referenciales basadas en las fórmulas oficiales. Para valores exactos y oficiales, consulta tu liquidación de sueldo, el SII o un profesional.</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 CalculaChile · <a href="index.html">Inicio</a><a href="privacidad.html">Privacidad</a><a href="terminos.html">Términos</a><a href="contacto.html">Contacto</a></p>
+</footer>
+
+<script>
+function enviarFormulario() {
+  const nombre = document.getElementById('nombre').value;
+  const email = document.getElementById('email').value;
+  const mensaje = document.getElementById('mensaje').value;
+  if (!nombre || !email || !mensaje) {
+    alert('Por favor completa todos los campos obligatorios.');
+    return;
+  }
+  document.getElementById('successMsg').style.display = 'block';
+}
+
+function toggleFaq(el) {
+  const answer = el.nextElementSibling;
+  const span = el.querySelector('span');
+  answer.classList.toggle('open');
+  span.textContent = answer.classList.contains('open') ? '−' : '+';
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sobre Nosotros — CalculaChile</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --verde: #0d9e6e; --verde-dark: #0a7d57; --verde-light: #e6f7f2;
+    --gris: #f5f6f8; --gris-medio: #e2e4e9; --gris-texto: #6b7280;
+    --texto: #111827; --blanco: #ffffff;
+    --fuente: 'DM Sans', sans-serif; --titulo: 'Sora', sans-serif;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: var(--fuente); color: var(--texto); background: #fafbfc; font-size: 16px; line-height:1.7; }
+  nav { background: var(--blanco); border-bottom: 1px solid var(--gris-medio); padding: 0 24px; }
+  .nav-inner { max-width: 860px; margin: 0 auto; display:flex; align-items:center; height: 64px; }
+  .logo { font-family: var(--titulo); font-size: 20px; font-weight: 700; color: var(--verde-dark); text-decoration:none; display:flex; align-items:center; gap:8px; }
+  .logo-icon { width:30px; height:30px; background: var(--verde); border-radius:7px; display:flex; align-items:center; justify-content:center; font-size:16px; }
+  .container { max-width: 860px; margin: 0 auto; padding: 48px 24px 80px; }
+  .hero { background: linear-gradient(135deg, #0d9e6e, #0a7d57); border-radius: 16px; padding: 48px 40px; margin-bottom: 48px; text-align:center; color:white; }
+  .hero h1 { font-family: var(--titulo); font-size: 32px; font-weight: 700; margin-bottom: 12px; }
+  .hero p { font-size: 17px; opacity:.9; max-width:560px; margin:0 auto; }
+  .mission-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px; margin: 40px 0; }
+  @media(max-width:640px){ .mission-grid { grid-template-columns:1fr; } }
+  .mission-card { background:white; border:1px solid var(--gris-medio); border-radius:12px; padding:24px; text-align:center; }
+  .mission-icon { font-size:36px; margin-bottom:12px; }
+  .mission-card h3 { font-family: var(--titulo); font-size:16px; font-weight:600; margin-bottom:8px; }
+  .mission-card p { font-size:14px; color:var(--gris-texto); }
+  h2 { font-family: var(--titulo); font-size: 22px; font-weight: 700; color: var(--texto); margin: 40px 0 16px; }
+  p { margin-bottom: 14px; color: #374151; }
+  .values { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:24px 0; }
+  @media(max-width:640px){ .values { grid-template-columns:1fr; } }
+  .value-item { background:var(--verde-light); border-radius:10px; padding:20px; border-left:3px solid var(--verde); }
+  .value-item h4 { font-family:var(--titulo); font-size:15px; font-weight:600; color:var(--verde-dark); margin-bottom:6px; }
+  .value-item p { font-size:14px; color:#374151; margin:0; }
+  .disclaimer { background:#f5f6f8; border-radius:10px; padding:20px 24px; margin:32px 0; border-left:3px solid #e2e4e9; }
+  .disclaimer p { font-size:14px; color:var(--gris-texto); margin:0; }
+  footer { background: #111827; color: rgba(255,255,255,0.5); text-align:center; padding: 24px; font-size: 13px; }
+  footer a { color: rgba(255,255,255,0.6); text-decoration:none; margin: 0 12px; }
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><div class="logo-icon">🧮</div>CalculaChile</a>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="hero">
+    <h1>🧮 Sobre CalculaChile</h1>
+    <p>Hacemos que los números financieros y laborales de Chile sean simples, claros y accesibles para todos.</p>
+  </div>
+
+  <h2>¿Qué es CalculaChile?</h2>
+  <p>CalculaChile nació con una misión simple: <strong>darle a los chilenos herramientas gratuitas y precisas</strong> para entender su situación financiera y laboral sin necesidad de ser expertos ni contratar a nadie.</p>
+  <p>Cada mes, miles de chilenos se preguntan cuánto recibirán de finiquito, cuánto queda de su sueldo después de los descuentos, o cuánto pagarán de dividendo. CalculaChile responde esas preguntas en segundos.</p>
+
+  <div class="mission-grid">
+    <div class="mission-card">
+      <div class="mission-icon">🎯</div>
+      <h3>Nuestra misión</h3>
+      <p>Democratizar el acceso a información financiera clara y gratuita para todos los chilenos.</p>
+    </div>
+    <div class="mission-card">
+      <div class="mission-icon">🔍</div>
+      <h3>Nuestra visión</h3>
+      <p>Ser la plataforma de calculadoras financieras más confiable y completa de Chile y Latinoamérica.</p>
+    </div>
+    <div class="mission-card">
+      <div class="mission-icon">❤️</div>
+      <h3>Nuestro compromiso</h3>
+      <p>Mantener todas las calculadoras actualizadas, gratuitas y sin necesidad de registro.</p>
+    </div>
+  </div>
+
+  <h2>Nuestros valores</h2>
+  <div class="values">
+    <div class="value-item">
+      <h4>✅ Precisión</h4>
+      <p>Usamos las fórmulas oficiales del Código del Trabajo, SII y Banco Central de Chile.</p>
+    </div>
+    <div class="value-item">
+      <h4>🔓 Acceso libre</h4>
+      <p>Todas las calculadoras son 100% gratuitas, sin registro ni suscripción.</p>
+    </div>
+    <div class="value-item">
+      <h4>🔒 Privacidad</h4>
+      <p>Los datos que ingresas no se almacenan. Todo ocurre en tu navegador.</p>
+    </div>
+    <div class="value-item">
+      <h4>📅 Actualización</h4>
+      <p>Actualizamos valores (UF, UTM, sueldo mínimo) cada vez que cambian oficialmente.</p>
+    </div>
+  </div>
+
+  <h2>¿Qué calculadoras ofrecemos?</h2>
+  <p>Actualmente contamos con calculadoras en las siguientes categorías:</p>
+  <ul style="margin:0 0 14px 20px;">
+    <li><strong>Laborales:</strong> sueldo líquido, finiquito, gratificación, horas extra, vacaciones</li>
+    <li><strong>Financieras:</strong> crédito hipotecario, crédito de consumo, plazo fijo, interés compuesto</li>
+    <li><strong>Tributarias:</strong> IVA, PPM, impuesto de segunda categoría, renta anual</li>
+    <li><strong>Conversores:</strong> UF a pesos, UTM a pesos, UF histórica</li>
+  </ul>
+
+  <div class="disclaimer">
+    <p>⚠️ <strong>Aviso legal:</strong> Las calculadoras de CalculaChile son de carácter referencial y educativo. No constituyen asesoría financiera, legal, tributaria ni laboral. Para decisiones importantes, consulta siempre con un profesional certificado.</p>
+  </div>
+
+  <h2>¿Tienes sugerencias?</h2>
+  <p>Si quieres que agreguemos una calculadora, encontraste un error en algún cálculo, o tienes cualquier consulta, escríbenos a través de nuestra <a href="contacto.html">página de contacto</a>. Leemos todos los mensajes.</p>
+</div>
+
+<footer>
+  <p>© 2026 CalculaChile · <a href="index.html">Inicio</a><a href="privacidad.html">Privacidad</a><a href="terminos.html">Términos</a><a href="contacto.html">Contacto</a></p>
+</footer>
+</body>
+</html>
